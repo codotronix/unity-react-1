@@ -13,11 +13,11 @@ const UnityComponent = () => {
   const goRight = () => sendMessage("Box", "GoRight");
 
   return (
-    <div style={{ textAlign: 'center', margin: '0 auto' }}>
+    <div style={{ textAlign: 'center' }}>
       {!isLoaded && (
         <p>Loading 3D scene... {Math.round(loadingProgression * 100)}%</p>
       )}
-      <Unity unityProvider={unityProvider} style={{ width: 370, height: 500 }} />
+      <Unity unityProvider={unityProvider} style={{ width: '100vw', height: 500 }} />
       <br />
       <button onClick={goLeft}>Go Left</button>
       <button onClick={goRight}>Go Right</button>
